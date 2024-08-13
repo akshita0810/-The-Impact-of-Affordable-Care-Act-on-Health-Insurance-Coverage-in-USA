@@ -1,42 +1,9 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Sun Jun 23 10:36:16 2024
 
-@author: akshi
-"""
 import seaborn as sns
 import pandas as pd
 import matplotlib.pyplot as plt
-
-%matplotlib inline
-%config InlineBackend.figure_format = 'retina' # nicer rendering of plots in retina displays
-
-import sys
-print(sys.version)
-
-import numpy as np
-print('Numpy version:', np.__version__)
-
-import pandas as pd
-print('Pandas version:', pd.__version__)
-
-import matplotlib as mpl
-import matplotlib.pyplot as plt
-from matplotlib.ticker import FuncFormatter
-print('Matplotlib version:', mpl.__version__)
-
-import plotly.graph_objs as go
-
-import seaborn as sns
-sns.set()
-pal = sns.hls_palette(10, h=.5)
-sns.set_palette(pal)
-
-import re
 
 #Source: https://www.kaggle.com/cdc/health-care-access-coverage
-#The health insurance coverage data was compiled from the US Department of Health and Human Services and 
-#US Census Bureau. It seems to relate to surveys, maybe the American Community Survey? 
 
 pre_ACA = pd.read_csv('HC_access_1995-2010.csv')
 
@@ -153,7 +120,7 @@ plt.legend(loc='upper right');
 
 
 # Load second data
-post_ACA = pd.read_csv('HC_access_afterACA.csv')
+post_ACA = pd.read_csv('AfterACA.csv')
 
 # Columns with percentage values
 cols = ['Uninsured Rate (2010)', 'Uninsured Rate (2015)', 'Uninsured Rate Change (2010-2015)']
